@@ -544,14 +544,9 @@ img {
 .mail-subscribe {
     width: 570px;
     margin-left: 93px;
-    /* display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center; */
 }
 
 .mail-subscribe-text {
-    /* width: 100%; */
     margin-bottom: 20px;
     font-weight: bold;
     font-size: 14px;
@@ -559,7 +554,10 @@ img {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #FFFFFF;
+}
 
+.mail-subscribe-field {
+    display: flex;
 }
 
 .mail-input {
@@ -573,6 +571,7 @@ img {
 }
 
 .mail-button {
+    width: 200px;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.87;

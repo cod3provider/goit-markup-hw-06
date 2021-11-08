@@ -489,10 +489,25 @@
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <button class="modal-btn" type="button" data-modal-close>
-                <svg width="18" height="18">
+                <svg class="icon-close" width="18" height="18">
                     <use href="./images/sprite.svg#icon-close"></use>
                 </svg>
             </button>
+
+            <form class="modal-form">
+                <p class="modal-text">Оставьте свои данные, мы вам перезвоним</p>
+                <label class="modal-label" for="name">Имя</label>
+                <input class="modal-input" type="name" name="name" id="name">
+
+                <label class="modal-label" for="tel">Телефон</label>
+                <input class="modal-input" type="tel" name="tel" id="tel">
+
+                <label class="modal-label" for="email">Почта</label>
+                <input class="modal-input" type="email" name="email" id="email">
+
+                <label>Комментарий<textarea class="modal-comment" name="comment" placeholder="Введите текст"
+                        rows="5"></textarea></label>
+            </form>
         </div>
     </div>
 

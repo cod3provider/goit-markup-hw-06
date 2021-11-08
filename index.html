@@ -498,7 +498,7 @@
                 <p class="modal-form-text">Оставьте свои данные, мы вам перезвоним</p>
                 <label class="modal-form-label" for="name">Имя
                     <span class="modal-form-wrap">
-                        <input class="modal-form-input" type="name" name="name" id="name">
+                        <input class="modal-form-input" type="name" name="name" id="name" minlength="3">
                         <svg class="modal-form-icon" width="18" height="18">
                             <use href="./images/sprite.svg#icon-modal-person"></use>
                         </svg>
@@ -525,6 +525,12 @@
 
                 <label class="modal-form-label">Комментарий
                     <textarea class="modal-comment" name="comment" placeholder="Введите текст"></textarea>
+                </label>
+
+
+                <input class="policy-checkbox-input visually-hidden" type="checkbox" name="policy" id="policy">
+                <label class="policy-checkbox-label" for="policy">Соглашаюсь с рассылкой и принимаю <a
+                        class="policy-link" href="#">Условия договора</a>
                 </label>
 
                 <button class="button modal-form-button" type="submit">Отправить</button>

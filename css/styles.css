@@ -11,15 +11,14 @@
     --bg-color: #2F303A;
     --header-logo-color: #000000;
     --footer-logo-color: #ffffff;
-    --button-text-color: #212121;
-    --filter-button-text-color: #212121;
+    --portfolio-button-text-color: #212121;
     --filter-button-bg-color: #F5F4FA;
     --bg-secondary-section-color: #F5F4FA;
     --bg-team-card: #ffffff;
     --portfolio-border-color: #EEEEEE;
     --section-padding: 94px;
     --section-title-font-weight: 700;
-    --button-secondary-text-color: #ffffff;
+    --button-text-color: #ffffff;
 }
 
 h1,
@@ -76,6 +75,12 @@ img {
     height: auto;
 }
 
+.button {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    color:var(--button-text-color);
+}
 /* -------------------Header--------------------- */
 
 .page-header {
@@ -217,11 +222,8 @@ img {
     min-width: 200px;
     padding: 10px 32px;
     font-family: inherit;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.87;
     letter-spacing: 0.06em;
-    color: #ffffff;
+    color: var(--button-text-color);
     background-color: var(--hero-button-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
@@ -572,14 +574,11 @@ img {
 
 .mail-button {
     width: 200px;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.87;
     display: flex;
     align-items: center;
     text-align: center;
     letter-spacing: 0.06em;
-    color: #FFFFFF;
+    color: var(--button-text-color);
     padding: 10px 29px;
     border: none;
     background-color: var(--accent-color);
@@ -609,7 +608,7 @@ img {
     line-height: 1.63;
     text-align: center;
     letter-spacing: 0.03em;
-    color: var(--button-text-color);
+    color: var(--portfolio-button-text-color);
     background-color: var(--filter-button-bg-color);
     border: none;
     cursor: pointer;
@@ -771,7 +770,7 @@ img {
     flex-direction: column;
 }
 
-.modal-text {
+.modal-form-text {
     margin-bottom: 12px;
     font-weight: 700;
     font-size: 20px;
@@ -781,15 +780,26 @@ img {
     color: #212121;
 }
 
-.modal-input {
-    padding: 11px 12px;
+.modal-form-input {
+    padding: 11px 12px 11px 30px;
+    width: 100%;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
 }
 
-.mail-input:not(:last-child) {
+.modal-form-input:focus {
+    outline: none;
+    border-color: #2196F3;
+}
+
+.modal-form-input:focus + .modal-form-icon {
+    fill: #2196F3;
+}
+/* .modal-form-input:not(:last-child) {
     margin-bottom: 10px;
-}
+} */
 
-.modal-label {
+.modal-form-label {
     font-weight: normal;
     font-size: 12px;
     line-height: 1.17;
@@ -797,7 +807,54 @@ img {
     color: #757575;
 }
 
+.modal-form-wrap {
+    margin-top: 4px;
+}
+
+.modal-form-label:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.modal-form-wrap {
+    display: block;
+    position: relative;
+}
+
+.modal-form-icon {
+    position: absolute;
+    top: 0;
+    left: 12px;
+    transform: translateY(50%);
+}
+
 .modal-comment {
-    width: 100%;
     padding: 12px 16px;
+    resize: none;
+    width: 100%;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    margin-top: 4px;
+}
+
+.modal-comment:focus {
+    outline: none;
+    border-color: #2196F3;
+}
+
+.modal-form-button {
+    padding: 10px 55px;
+    min-width: 200px;
+    letter-spacing: 0.06em;
+    color: var(--button-text-color);
+    background-color: #2196F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+    align-self: center;
+}
+
+.modal-form-button:hover,
+.modal-form-button:focus {
+    background-color: #188CE8;
 }
